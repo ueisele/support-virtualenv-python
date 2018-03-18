@@ -36,8 +36,7 @@ EOL
     chmod +x ${VENVWRAPPER_HOME}/ansible-v${ANSIBLE_VERSION}/${command}
 }
 
-pip install virtualenv --upgrade
-virtualenv ${VENV_HOME}/ansible-v${ANSIBLE_VERSION}
+virtualenv2 ${VENV_HOME}/ansible-v${ANSIBLE_VERSION}
 
 create_penv_script
 create_command_wrapper_script pip
