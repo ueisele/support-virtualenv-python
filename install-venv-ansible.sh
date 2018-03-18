@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 set -e
 
-VENV_HOME=~/venv
+VENV_HOME=~/Apps/lang/python/venv
 mkdir -p ${VENV_HOME}
-VENVWRAPPER_HOME=~/venvwrapper
+VENVWRAPPER_HOME=~/Apps/lang/python/venvwrapper
 mkdir -p ${VENVWRAPPER_HOME}
 
 ANSIBLE_VERSION=2.3.0.0
