@@ -40,6 +40,7 @@ EOL
 virtualenv2 ${VENV_HOME}/ansible-v${ANSIBLE_VERSION}
 
 create_penv_script
+create_command_wrapper_script python
 create_command_wrapper_script pip
 
 ${VENVWRAPPER_HOME}/ansible-v${ANSIBLE_VERSION}/pip install yolk3k
@@ -49,6 +50,10 @@ ${VENVWRAPPER_HOME}/ansible-v${ANSIBLE_VERSION}/pip install PyYAML
 ${VENVWRAPPER_HOME}/ansible-v${ANSIBLE_VERSION}/pip install pycrypto
 ${VENVWRAPPER_HOME}/ansible-v${ANSIBLE_VERSION}/pip install Jinja2
 ${VENVWRAPPER_HOME}/ansible-v${ANSIBLE_VERSION}/pip install ansible==${ANSIBLE_VERSION}
+${VENVWRAPPER_HOME}/ansible-v${ANSIBLE_VERSION}/pip install GitPython
+${VENVWRAPPER_HOME}/ansible-v${ANSIBLE_VERSION}/pip install requests
+${VENVWRAPPER_HOME}/ansible-v${ANSIBLE_VERSION}/pip install python-consul
+${VENVWRAPPER_HOME}/ansible-v${ANSIBLE_VERSION}/pip install repositorytools
 
 create_command_wrapper_script ansible
 create_command_wrapper_script ansible-playbook
