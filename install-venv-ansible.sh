@@ -12,10 +12,11 @@ function create_penv_script() {
     cat > ${VENV_HOME}/penv << EOL
 #!/usr/bin/env bash
 set -e
+
 function run_in_env() {
 	local envpath=\${1:?'Missing python virtualenv path first parameter'}
 	shift
-	(source \${envpath}/bin/activate && "\$@")
+	(source ${VENV_HOME}/\${envpath}/bin/activate && "\$@")
 }
 run_in_env "\$@"
 EOL
@@ -29,7 +30,7 @@ function create_command_wrapper_script() {
 #!/usr/bin/env bash
 set -e
 function command() {
-	${VENV_HOME}/penv ${VENV_HOME}/ansible-v${ANSIBLE_VERSION} ${command} "\$@"
+	${VENV_HOME}/penv ansible-v${ANSIBLE_VERSION} ${command} "\$@"
 }
 command "\$@"
 EOL
